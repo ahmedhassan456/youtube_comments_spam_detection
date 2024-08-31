@@ -1,6 +1,6 @@
-def GetPredictions(model, comment):
+def GetPredictions(model, author, vid_title, comment):
     
-    predictions = model.predict([comment])
+    predictions = model.predict([author + "  " + vid_title + "  " + comment])
 
     result = {
         0: "Not Spam",
