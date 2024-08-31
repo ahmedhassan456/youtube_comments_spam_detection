@@ -2,4 +2,8 @@ def GetPredictions(model, comment):
     
     predictions = model.predict([comment])
 
-    return predictions[0]
+    result = {
+        0: "Not Spam",
+        1: "Spam"
+    }
+    return result[predictions[0]]
